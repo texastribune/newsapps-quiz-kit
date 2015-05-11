@@ -1,1 +1,16 @@
-{}
+{
+  "Quiz": [
+    {
+      "question": "Is the sky blue?",
+      "answer": true,
+      "incorrect_response": "Seriously?",
+      "correct_response": "Good job."
+    },
+    {
+      "question": "Are dogs the coolest?",
+      "answer": false,
+      "incorrect_response": "Cats are obviously cooler.",
+      "correct_response": "Cat lovers unite."
+    }
+  ]
+}

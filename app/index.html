@@ -21,6 +21,34 @@
 
 <div id="graphic" class="graphic">
 
+<section class="quiz">
+  {% for question in Quiz %}
+  <article id="question-{{ loop.index }}" class="quiz-question">
+    <header>
+      <h2 class="font-l">{{ question.question }}</h3>
+    </header>
+    {% if question.answer == true %}
+    <button class="button response" value="1">True</button>
+    <button class="button response" value="0">False</button>
+    {% else %}
+    <button class="button response" value="0">True</button>
+    <button class="button response" value="1">False</button>
+    {% endif %}
+    <div class="correct">
+      <header>
+        <h2 class="font-l">Correct!</h2>
+      </header>
+      <p>{{ question.correct_response }}</p>
+    </div>
+    <div class="incorrect">
+      <header>
+        <h2 class="font-l">Oops, wrong answer.</h2>
+      </header>
+      <p>{{ question.incorrect_response }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</section>
 <!-- Add your HTML here! -->
 
 </div>
@@ -33,6 +61,7 @@
 </div>
 
 <!-- build:js scripts/main.min.js -->
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/pym.js/dist/pym.js"></script>
 <script src="scripts/main.js"></script>
 <!-- endbuild -->

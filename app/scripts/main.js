@@ -8,6 +8,17 @@
   function render() {
 
     // Add your JS here!
+    $('.response').click(function() {
+      var question = $(this).parent();
+
+      if ($(this).val() === '1') {
+        $(question).find('.correct').show();
+        $(question).find('.incorrect').hide();
+      } else {
+        $(question).find('.incorrect').show();
+        $(question).find('.correct').hide();
+      }
+    });
 
     if (pymChild) {
       pymChild.sendHeight();
