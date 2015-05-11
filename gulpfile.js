@@ -30,10 +30,10 @@ gulp.task('styles', function() {
       sourcemap: true
     })
     .on('error', console.error.bind(console))
-    .pipe($.autoprefixer({
-      browsers: ['last 2 versions', 'IE 9', 'IE 8'],
-      cascade: false
-    }))
+    // .pipe($.autoprefixer({
+    //   browsers: ['last 2 versions', 'IE 9', 'IE 8'],
+    //   cascade: false
+    // }))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe($.size({title: 'styles'}));
