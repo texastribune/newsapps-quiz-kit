@@ -37,12 +37,11 @@
       $(question).find('.response').attr('disabled', true);
 
       if (buttons.every(quizComplete)) {
+        $('.quiz-results').toggle();
         $('#score').html(tally);
       }
 
     });
-
-
 
     if (pymChild) {
       pymChild.sendHeight();

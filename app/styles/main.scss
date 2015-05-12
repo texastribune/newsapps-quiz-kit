@@ -4,6 +4,7 @@
 @import 'base';
 
 // Add your SCSS here!
+
 .quiz-question {
   border: 1px solid $tribune-yellow;
   padding: 1em;
@@ -12,9 +13,9 @@
 }
 
 .correct,
-.incorrect {
+.incorrect,
+.quiz-results {
   display: none;
-
 }
 
 .response {
