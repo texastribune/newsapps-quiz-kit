@@ -2,7 +2,7 @@
   "private": true,
   "config": {
     "s3_bucket": "graphics.texastribune.org",
-    "slug": "true-false-quiz"
+    "slug": "true-false-test-quiz"
   },
   "devDependencies": {
     "browser-sync": "^2.0.0-rc10",
