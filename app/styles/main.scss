@@ -4,8 +4,34 @@
 @import 'base';
 
 // Add your SCSS here!
+.quiz-question {
+  border: 1px solid $tribune-yellow;
+  padding: 1em;
+  margin-bottom: 1.4em;
+
+}
 
 .correct,
 .incorrect {
   display: none;
+
+}
+
+.response {
+  background-color: $white;
+  border-radius: 2px;
+  border: 1px solid $tribune-teal;
+  margin-bottom: 1em;
+
+  &:hover {
+    background-color: transparentize($tribune-teal, .8);
+  }
+}
+
+.selected {
+  background-color: transparentize($tribune-teal, .4);
+
+  &:hover {
+    background-color: transparentize($tribune-teal, .4);
+  }
 }

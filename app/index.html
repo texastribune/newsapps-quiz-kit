@@ -28,11 +28,11 @@
       <h2 class="font-l">{{ question.question }}</h3>
     </header>
     {% if question.answer == true %}
-    <button class="button response" value="1">True</button>
-    <button class="button response" value="0">False</button>
+    <button type="radio" class="response" value="1">True</button>
+    <button type="radio" class="response" value="0">False</button>
     {% else %}
-    <button class="button response" value="0">True</button>
-    <button class="button response" value="1">False</button>
+    <button type="radio" class="response" value="0">True</button>
+    <button type="radio" class="response" value="1">False</button>
     {% endif %}
     <div class="correct">
       <header>
@@ -48,6 +48,11 @@
     </div>
   </article>
   {% endfor %}
+</section>
+<section class="quiz-results">
+  <header>
+    <h2 class="font-l">You scored <span id="score"></span>!</h2>
+  </header>
 </section>
 <!-- Add your HTML here! -->
 
