@@ -2,7 +2,7 @@
 
 The News Apps Quiz Kit is a boilerplate for embeddable quizes. It was built for the Texas Tribune's [News Apps](https://twitter.com/newsapps) team, but could easily be altered to cater to other organization's/individual's needs. It is powered by the [News Apps Graphic Kit](https://github.com/texastribune/newsapps-graphic-kit).
 
-## [Sample Spreadsheet](https://docs.google.com/a/texastribune.org/spreadsheets/d/1juRPGh4ZTUEpcJFZj7fq4kuNdteLUap1db0DPKTlUE0/edit?usp=sharing) Template
+### [Sample Spreadsheet](https://docs.google.com/a/texastribune.org/spreadsheets/d/1juRPGh4ZTUEpcJFZj7fq4kuNdteLUap1db0DPKTlUE0/edit?usp=sharing) Template
 
 | question                                           | type | answer | a     | b     | c     | d    | incorrect_response     | correct_response |
 |----------------------------------------------------|------|--------|-------|-------|-------|------|------------------------|------------------|
@@ -14,8 +14,7 @@ The News Apps Quiz Kit is a boilerplate for embeddable quizes. It was built for 
 
 Each row represents a question. Under type, indicate whether the question is true/false (TF) or multiple choice (MULT). For TF questions, just write "true" or "false" in the answer columns, and leave the multiple choice answer columns blank. For MULT questions, fill in each of the multiple choice answers, and then indicate which is correct in the answer column. (The template will accept capital or lowercase letters A/a, B/b, C/c or D/d.)
 
-
-## Features
+### Features
 
 - Live reloading and viewing powered by [BrowserSync](http://www.browsersync.io/)
 - Compiling of Sass/SCSS with [Ruby Sass](http://sass-lang.com/)
@@ -29,7 +28,7 @@ Each row represents a question. Under type, indicate whether the question is tru
 - Asset revisioning with [gulp-rev](https://github.com/sindresorhus/gulp-rev) and [gulp-rev-replace](https://github.com/jamesknelson/gulp-rev-replace)
 - [pym.js](http://blog.apps.npr.org/pym.js/) included by default for easy embedding in hostile CMS environments
 
-## Quickstart
+### Quickstart
 
 1. Download the project folder or clone the repo.
 2. `npm install && bower install` and `npm install jquery`
@@ -37,7 +36,7 @@ Each row represents a question. Under type, indicate whether the question is tru
 4. Add your Google sheet's ID to the `config.json`, and override any sheets that need to be processed differently. (`keyvalue` or `objectlist`)
 5. Get to work!
 
-## Connect to S3
+### Connect to S3
 
 To use the commands to deploy your project to Amazon S3, you'll need to add a [profile newsapps] to ~/.aws/config. It should look something like this:
 
