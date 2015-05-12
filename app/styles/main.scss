@@ -18,6 +18,22 @@
   display: none;
 }
 
+.correct {
+  header h2 {
+    color: $green;
+  }
+}
+
+.incorrect {
+  header h2 {
+    color: $rep-red;
+  }
+}
+
+.quiz-results {
+  text-align: center;
+}
+
 .response {
   background-color: $white;
   border-radius: 2px;
