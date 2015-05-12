@@ -23,7 +23,7 @@
     });
 
     $('.response').click(function() {
-      var question = $(this).parent();
+      var question = $(this).closest('article');
       $(this).addClass('selected');
 
       if ($(this).val() === '1') {
