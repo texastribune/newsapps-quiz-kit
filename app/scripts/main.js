@@ -8,12 +8,12 @@
   function render() {
 
     // Add your JS here!
-    var buttons = []
+    var buttons = [];
     var totalQs = 0;
     var tally = 0;
 
     function quizComplete(question) {
-      if (question.is(":disabled")) {
+      if (question.is(':disabled')) {
         return true;
       }
     }
