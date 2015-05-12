@@ -1,6 +1,19 @@
-# News Apps Graphic Kit
+# News Apps Quiz Kit
 
 The News Apps Quiz Kit is a boilerplate for embeddable quizes. It was built for the Texas Tribune's [News Apps](https://twitter.com/newsapps) team, but could easily be altered to cater to other organization's/individual's needs. It is powered by the [News Apps Graphic Kit](https://github.com/texastribune/newsapps-graphic-kit).
+
+## [Sample Spreadsheet](https://docs.google.com/a/texastribune.org/spreadsheets/d/1juRPGh4ZTUEpcJFZj7fq4kuNdteLUap1db0DPKTlUE0/edit?usp=sharing) Template
+
+| question                                           | type | answer | a     | b     | c     | d    | incorrect_response     | correct_response |
+|----------------------------------------------------|------|--------|-------|-------|-------|------|------------------------|------------------|
+| The Tribune has an amazing news apps team.         | TF   | TRUE   |       |       |       |      | Go home, you're drunk. | Thank you!       |
+| Which news apps member has the coolest cat poster? | MULT | A      | Becca | Jolie | Annie | Ryan | :{ #sadmustache        | Good job.        |
+| Who plays in a fake band with "the ladies"?        | MULT | d      | Becca | Jolie | Annie | Ryan | :{ #sadmustache        | Good job.        |
+| Who is most likely to be eaten by a dinosaur?      | MULT | B      | Becca | Jolie | Annie | Ryan | :{ #sadmustache        | Good job.        |
+| Who tells secrets to their cat?                    | MULT | c      | Becca | Jolie | Annie | Ryan | :{ #sadmustache        | Good job.        |
+
+Each row represents a question. Under type, indicate whether the question is true/false (TF) or multiple choice (MULT). For TF questions, just write "true" or "false" in the answer columns, and leave the multiple choice answer columns blank. For MULT questions, fill in each of the multiple choice answers, and then indicate which is correct in the answer column. (The template will accept capital or lowercase letters A/a, B/b, C/c or D/d.)
+
 
 ## Features
 
@@ -41,13 +54,7 @@ gulp
 npm run deploy
 ```
 
-The package will deploy to graphics.texastribune.org/. To change the location, update the package.json file.
-
-## Assets
-
-The graphics kit comes with an empty app/assets folder for you to store images, fonts and data files. The kit works best if you add these files to app/assets/images, app/assets/fonts and app/assets/data. These files will automatically be ignored by git hub, if added to the proper folders, to prevent a storage overload and to keep files locally that may have sensitive information in an open source project.
-
-*[Yeoman](http://yeoman.io/) is being considered.*
+The package will deploy to graphics.texastribune.org/. You'll need to add a slug to package.json to designate a specific S3 location.
 
 ## Available Commands
 
@@ -71,12 +78,4 @@ npm run deploy
 ```
 Deploys the project.
 
-```sh
-npm run assets/push
-```
-Pushes the raw assets to the S3 bucket.
 
-```sh
-npm run assets/pull
-```
-Pulls the raw assets down to the local environment.

@@ -15,7 +15,7 @@
       "b": "Jolie",
       "c": "Annie",
       "d": "Ryan",
-      "incorrect_response": ":{ #sadmustache for you.",
+      "incorrect_response": ":{ #sadmustache",
       "correct_response": "Good job."
     },
     {
@@ -26,7 +26,7 @@
       "b": "Jolie",
       "c": "Annie",
       "d": "Ryan",
-      "incorrect_response": ":{ #sadmustache for you.",
+      "incorrect_response": ":{ #sadmustache",
       "correct_response": "Good job."
     },
     {
@@ -37,7 +37,7 @@
       "b": "Jolie",
       "c": "Annie",
       "d": "Ryan",
-      "incorrect_response": ":{ #sadmustache for you.",
+      "incorrect_response": ":{ #sadmustache",
       "correct_response": "Good job."
     },
     {
@@ -48,7 +48,7 @@
       "b": "Jolie",
       "c": "Annie",
       "d": "Ryan",
-      "incorrect_response": ":{ #sadmustache for you.",
+      "incorrect_response": ":{ #sadmustache",
       "correct_response": "Good job."
     }
   ]
