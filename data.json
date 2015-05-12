@@ -11,6 +11,12 @@
       "answer": false,
       "incorrect_response": "Cats are obviously cooler.",
       "correct_response": "Cats are obviously cooler."
+    },
+    {
+      "question": "The Tribune has an amazing news apps team.",
+      "answer": true,
+      "incorrect_response": "Go home, you're drunk.",
+      "correct_response": "Thank you!"
     }
   ]
 }

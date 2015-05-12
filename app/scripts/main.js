@@ -45,11 +45,13 @@
         $('#total-questions').html(totalQs);
       }
 
+      pymChild.sendHeight();
+
     });
 
-    if (pymChild) {
-      pymChild.sendHeight();
-    }
+    // if (pymChild) {
+    //   pymChild.sendHeight();
+    // }
   }
 
   function load() {
