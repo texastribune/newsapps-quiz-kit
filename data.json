@@ -1,22 +1,55 @@
 {
   "Quiz": [
     {
-      "question": "Is the sky blue?",
-      "answer": true,
-      "incorrect_response": "Seriously?",
-      "correct_response": "Good job."
-    },
-    {
-      "question": "Are dogs the coolest?",
-      "answer": false,
-      "incorrect_response": "Cats are obviously cooler.",
-      "correct_response": "Cats are obviously cooler."
-    },
-    {
       "question": "The Tribune has an amazing news apps team.",
+      "type": "TF",
       "answer": true,
       "incorrect_response": "Go home, you're drunk.",
       "correct_response": "Thank you!"
+    },
+    {
+      "question": "Which news apps member has the coolest cat poster?",
+      "type": "MULT",
+      "answer": "A",
+      "a": "Becca",
+      "b": "Jolie",
+      "c": "Annie",
+      "d": "Ryan",
+      "incorrect_response": ":{ #sadmustache for you.",
+      "correct_response": "Good job."
+    },
+    {
+      "question": "Who plays in a fake band with \"the ladies\"?",
+      "type": "MULT",
+      "answer": "d",
+      "a": "Becca",
+      "b": "Jolie",
+      "c": "Annie",
+      "d": "Ryan",
+      "incorrect_response": ":{ #sadmustache for you.",
+      "correct_response": "Good job."
+    },
+    {
+      "question": "Who is most likely to be eaten by a dinosaur?",
+      "type": "MULT",
+      "answer": "B",
+      "a": "Becca",
+      "b": "Jolie",
+      "c": "Annie",
+      "d": "Ryan",
+      "incorrect_response": ":{ #sadmustache for you.",
+      "correct_response": "Good job."
+    },
+    {
+      "question": "Who tells secrets to their cat?",
+      "type": "MULT",
+      "answer": "c",
+      "a": "Becca",
+      "b": "Jolie",
+      "c": "Annie",
+      "d": "Ryan",
+      "incorrect_response": ":{ #sadmustache for you.",
+      "correct_response": "Good job."
     }
   ]
 }

@@ -27,12 +27,37 @@
     <header>
       <h2 class="font-l">{{ question.question }}</h3>
     </header>
-    {% if question.answer == true %}
-    <button type="radio" class="response" value="1">True</button>
-    <button type="radio" class="response" value="0">False</button>
+
+    {% if question.type == "TF" %}
+      {% if question.answer == true %}
+      <button class="response" value="1">True</button>
+      <button class="response" value="0">False</button>
+      {% else %}
+      <button class="response" value="0">True</button>
+      <button class="response" value="1">False</button>
+      {% endif %}
     {% else %}
-    <button type="radio" class="response" value="0">True</button>
-    <button type="radio" class="response" value="1">False</button>
+      {% if question.answer|lower == "a" %}
+      <button class="response" value="1">{{ question.a }}</button>
+      <button class="response" value="0">{{ question.b }}</button>
+      <button class="response" value="0">{{ question.c }}</button>
+      <button class="response" value="0">{{ question.d }}</button>
+      {% elif question.answer|lower == "b" %}
+      <button class="response" value="0">{{ question.a }}</button>
+      <button class="response" value="1">{{ question.b }}</button>
+      <button class="response" value="0">{{ question.c }}</button>
+      <button class="response" value="0">{{ question.d }}</button>
+      {% elif question.answer|lower == "c" %}
+      <button class="response" value="0">{{ question.a }}</button>
+      <button class="response" value="0">{{ question.b }}</button>
+      <button class="response" value="1">{{ question.c }}</button>
+      <button class="response" value="0">{{ question.d }}</button>
+      {% else %}
+      <button class="response" value="0">{{ question.a }}</button>
+      <button class="response" value="0">{{ question.b }}</button>
+      <button class="response" value="0">{{ question.c }}</button>
+      <button class="response" value="1">{{ question.d }}</button>
+      {% endif %}
     {% endif %}
     <div class="correct">
       <header>
