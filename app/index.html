@@ -29,15 +29,17 @@
     </header>
 
     {% if question.type == "TF" %}
+      <div class="responses">
       {% if question.answer == true %}
-      <button class="response" value="1">True</button>
-      <button class="response" value="0">False</button>
+        <button class="response" value="1">True</button>
+        <button class="response" value="0">False</button>
       {% else %}
-      <button class="response" value="0">True</button>
-      <button class="response" value="1">False</button>
+        <button class="response" value="0">True</button>
+        <button class="response" value="1">False</button>
       {% endif %}
+      </div>
     {% else %}
-      <ul>
+      <ul class="responses">
         <li>
           {% if question.answer|lower == "a" %}
           <button class="response" value="1">A</button>

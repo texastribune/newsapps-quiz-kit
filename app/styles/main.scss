@@ -6,10 +6,9 @@
 // Add your SCSS here!
 
 .quiz-question {
-  border: 1px solid $tribune-yellow;
-  padding: 1em;
-  margin-bottom: 1.4em;
-
+  border-bottom: 1px solid $tribune-yellow;
+  padding: 0 1em;
+  margin-bottom: 1.2em;
 }
 
 .correct,
@@ -32,6 +31,10 @@
 
 .quiz-results {
   text-align: center;
+}
+
+.responses {
+  margin-bottom: 1em;
 }
 
 .response {
