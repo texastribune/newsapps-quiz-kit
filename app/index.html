@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{ META.graphic_title }} | The Texas Tribune</title>
+  <title>{{ META.quiz_title }} | The Texas Tribune</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- build:css styles/main.min.css -->
   <link rel="stylesheet" href="styles/main.css">
@@ -12,7 +12,7 @@
 <body>
 
 <div class="header">
-  <h1>{{ META.graphic_title }}</h1>
+  <h1>{{ META.quiz_title }}</h1>
 </div>
 
 <div class="prose">
@@ -21,80 +21,89 @@
 
 <div id="graphic" class="graphic">
 
-<section class="quiz">
-  {% for question in Quiz %}
-  <article id="question-{{ loop.index }}" class="quiz-question">
-    <header>
-      <h2 class="font-l">{{ question.question }}</h3>
-    </header>
+  <section class="quiz">
 
-    {% if question.type == "TF" %}
-      <div class="responses">
-      {% if question.answer == true %}
-        <button class="response" value="1">True</button>
-        <button class="response" value="0">False</button>
+<!-- Question Template: Loops through each question in data.json -->
+
+    {% for question in Quiz %}
+    <article id="question-{{ loop.index }}" class="quiz-question">
+      <header>
+        <h2 class="font-l">{{ question.question }}</h3>
+      </header>
+
+      <!--   True/False Question -->
+      {% if question.type == "TF" %}
+        <div class="responses">
+        {% if question.answer == true %}
+          <button class="response" value="1">True</button>
+          <button class="response" value="0">False</button>
+        {% else %}
+          <button class="response" value="0">True</button>
+          <button class="response" value="1">False</button>
+        {% endif %}
+        </div>
       {% else %}
-        <button class="response" value="0">True</button>
-        <button class="response" value="1">False</button>
+
+      <!--     Multiple Choice Question -->
+        <ul class="responses">
+          <li>
+            {% if question.answer|lower == "a" %}
+            <button class="response" value="1">A</button>
+            {% else %}
+            <button class="response" value="0">A</button>
+            {% endif %}
+            {{ question.a }}
+          </li>
+          <li>
+            {% if question.answer|lower == "b" %}
+            <button class="response" value="1">B</button>
+            {% else %}
+            <button class="response" value="0">B</button>
+            {% endif %}
+            {{ question.b }}
+          </li>
+          <li>
+            {% if question.answer|lower == "c" %}
+            <button class="response" value="1">C</button>
+            {% else %}
+            <button class="response" value="0">C</button>
+            {% endif %}
+            {{ question.c }}
+          </li>
+          <li>
+            {% if question.answer|lower == "d" %}
+            <button class="response" value="1">D</button>
+            {% else %}
+            <button class="response" value="0">D</button>
+            {% endif %}
+            {{ question.d }}
+          </li>
+        </ul>
       {% endif %}
+
+      <!--     Answer Feedback   -->
+      <div class="correct">
+        <header>
+          <h2 class="font-m">Correct!</h2>
+        </header>
+        {{ question.correct_response }}
       </div>
-    {% else %}
-      <ul class="responses">
-        <li>
-          {% if question.answer|lower == "a" %}
-          <button class="response" value="1">A</button>
-          {% else %}
-          <button class="response" value="0">A</button>
-          {% endif %}
-          {{ question.a }}
-        </li>
-        <li>
-          {% if question.answer|lower == "b" %}
-          <button class="response" value="1">B</button>
-          {% else %}
-          <button class="response" value="0">B</button>
-          {% endif %}
-          {{ question.b }}
-        </li>
-        <li>
-          {% if question.answer|lower == "c" %}
-          <button class="response" value="1">C</button>
-          {% else %}
-          <button class="response" value="0">C</button>
-          {% endif %}
-          {{ question.c }}
-        </li>
-        <li>
-          {% if question.answer|lower == "d" %}
-          <button class="response" value="1">D</button>
-          {% else %}
-          <button class="response" value="0">D</button>
-          {% endif %}
-          {{ question.d }}
-        </li>
-      </ul>
-    {% endif %}
-    <div class="correct">
-      <header>
-        <h2 class="font-m">Correct!</h2>
-      </header>
-      <p>{{ question.correct_response }}</p>
-    </div>
-    <div class="incorrect">
-      <header>
-        <h2 class="font-m">Wrong</h2>
-      </header>
-      <p>{{ question.incorrect_response }}</p>
-    </div>
-  </article>
-  {% endfor %}
-</section>
-<section id="quiz-results" class="quiz-results">
-  <header>
-    <h2 class="font-xl">You scored <span id="score"></span> of <span id="total-questions"></span>!</h2>
-  </header>
-</section>
-<!-- Add your HTML here! -->
+      <div class="incorrect">
+        <header>
+          <h2 class="font-m">Wrong</h2>
+        </header>
+        {{ question.incorrect_response }}
+      </div>
+    </article>
+    {% endfor %}
+  </section>
+
+  <!-- Quiz Results -->
+  <section id="quiz-results" class="quiz-results">
+    <header>
+      <h2 class="font-xl">You scored <span id="score"></span> of <span id="total-questions"></span>!</h2>
+    </header>
+  </section>
 
 </div>
 

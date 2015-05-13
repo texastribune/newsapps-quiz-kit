@@ -4,7 +4,7 @@ The News Apps Quiz Kit is a boilerplate for embeddable quizes. It was built for 
 
 ### [Sample Spreadsheet](https://docs.google.com/a/texastribune.org/spreadsheets/d/1juRPGh4ZTUEpcJFZj7fq4kuNdteLUap1db0DPKTlUE0/edit?usp=sharing) Template
 
-| question                                           | type | answer | a     | b     | c     | d    | incorrect_response     | correct_response |
+| question                                           | type | answer | a     | b     | c     | d    | incorrect_response_md     | correct_response_md |
 |----------------------------------------------------|------|--------|-------|-------|-------|------|------------------------|------------------|
 | The Tribune has an amazing news apps team.         | TF   | TRUE   |       |       |       |      | Go home, you're drunk. | Thank you!       |
 | Which news apps member has the coolest cat poster? | MULT | A      | Becca | Jolie | Annie | Ryan | :{ #sadmustache        | Good job.        |
@@ -13,6 +13,8 @@ The News Apps Quiz Kit is a boilerplate for embeddable quizes. It was built for 
 | Who tells secrets to their cat?                    | MULT | c      | Becca | Jolie | Annie | Ryan | :{ #sadmustache        | Good job.        |
 
 Each row represents a question. Under type, indicate whether the question is true/false (TF) or multiple choice (MULT). For TF questions, just write "true" or "false" in the answer columns, and leave the multiple choice answer columns blank. For MULT questions, fill in each of the multiple choice answers, and then indicate which is correct in the answer column. (The template will accept capital or lowercase letters A/a, B/b, C/c or D/d.)
+
+
 
 ### Features
 

@@ -4,8 +4,8 @@
       "question": "The Tribune has an amazing news apps team.",
       "type": "TF",
       "answer": true,
-      "incorrect_response": "Go home, you're drunk.",
-      "correct_response": "Thank you!"
+      "incorrect_response_md": "<p>Go home, you’re drunk.</p>\n",
+      "correct_response_md": "<p>Thank you!</p>\n"
     },
     {
       "question": "Which news apps member has the coolest cat poster?",
@@ -15,8 +15,8 @@
       "b": "Jolie",
       "c": "Annie",
       "d": "Ryan",
-      "incorrect_response": ":{ #sadmustache",
-      "correct_response": "Good job."
+      "incorrect_response_md": "<p>:{ #sadmustache</p>\n",
+      "correct_response_md": "<p>Good job.</p>\n"
     },
     {
       "question": "Who plays in a fake band with \"the ladies\"?",
@@ -26,8 +26,8 @@
       "b": "Jolie",
       "c": "Annie",
       "d": "Ryan",
-      "incorrect_response": ":{ #sadmustache",
-      "correct_response": "Good job."
+      "incorrect_response_md": "<p>:{ #sadmustache</p>\n",
+      "correct_response_md": "<p>Good job.</p>\n"
     },
     {
       "question": "Who is most likely to be eaten by a dinosaur?",
@@ -37,8 +37,8 @@
       "b": "Jolie",
       "c": "Annie",
       "d": "Ryan",
-      "incorrect_response": ":{ #sadmustache",
-      "correct_response": "Good job."
+      "incorrect_response_md": "<p>:{ #sadmustache</p>\n",
+      "correct_response_md": "<p>Good job.</p>\n"
     },
     {
       "question": "Who tells secrets to their cat?",
@@ -48,8 +48,15 @@
       "b": "Jolie",
       "c": "Annie",
       "d": "Ryan",
-      "incorrect_response": ":{ #sadmustache",
-      "correct_response": "Good job."
+      "incorrect_response_md": "<p>:{ #sadmustache</p>\n",
+      "correct_response_md": "<p>Good job.</p>\n"
     }
-  ]
+  ],
+  "META": {
+    "quiz_title": "How well do you know The Texas Tribune's news apps team?",
+    "quiz_intro_md": "This is an example of a quiz made with the News Apps' [Quiz Kit](https://github.com/texastribune/newsapps-quiz-kit). Send feedback to [newsapps@texastribune.org](mailto:newsapps@texastribune.org).",
+    "source": "",
+    "source_url": "",
+    "credit": "Becca Aaronson"
+  }
 }
