@@ -7,43 +7,20 @@
 
   function render() {
 
+    $('#start').show();
     // Add your JS here!
-    var buttons = [];
-    var totalQs = 0;
-    var tally = 0;
-
-    function quizComplete(question) {
-      if (question.is(':disabled')) {
-        return true;
-      }
-    }
-
-    $('.response').each( function() {
-      buttons.push($(this));
-    });
 
     $('.response').click(function() {
       var question = $(this).closest('article');
-      $(this).addClass('selected');
+      var next = $(this).attr('data-link');
 
-      if ($(this).val() === '1') {
-        $(question).find('.correct').show();
-        $(question).find('.incorrect').hide();
-        tally++;
-        totalQs++;
-      } else {
-        $(question).find('.incorrect').show();
-        $(question).find('.correct').hide();
-        totalQs++;
-      }
+      $(this).addClass('selected');
+      $('#' + next).show();
+
+      console.log(next);
+
 
       $(question).find('.response').attr('disabled', true);
-
-      if (buttons.every(quizComplete)) {
-        $('.quiz-results').toggle();
-        $('#score').html(tally);
-        $('#total-questions').html(totalQs);
-      }
 
       pymChild.sendHeight();
 

@@ -1,60 +1,49 @@
 {
   "Quiz": [
     {
-      "question": "The Tribune has an amazing news apps team.",
-      "type": "TF",
-      "answer": true,
-      "incorrect_response_md": "<p>Go home, you’re drunk.</p>\n",
-      "correct_response_md": "<p>Thank you!</p>\n"
+      "id": "start",
+      "text": "Are you a cat or dog person?",
+      "a_option": "Cat",
+      "b_option": "Dog",
+      "a_next": "cat",
+      "b_next": "dog"
     },
     {
-      "question": "Which news apps member has the coolest cat poster?",
-      "type": "MULT",
-      "answer": "A",
-      "a": "Becca",
-      "b": "Jolie",
-      "c": "Annie",
-      "d": "Ryan",
-      "incorrect_response_md": "<p>:{ #sadmustache</p>\n",
-      "correct_response_md": "<p>Good job.</p>\n"
+      "id": "cat",
+      "text": "Do you tell secrets to your cat?",
+      "a_option": "Yes, duh.",
+      "b_option": "Um, no?",
+      "a_next": "annie",
+      "b_next": "becca"
     },
     {
-      "question": "Who plays in a fake band with \"the ladies\"?",
-      "type": "MULT",
-      "answer": "d",
-      "a": "Becca",
-      "b": "Jolie",
-      "c": "Annie",
-      "d": "Ryan",
-      "incorrect_response_md": "<p>:{ #sadmustache</p>\n",
-      "correct_response_md": "<p>Good job.</p>\n"
+      "id": "dog",
+      "text": "Which dog is best?",
+      "a_option": "Chihuahua-mix",
+      "b_option": "Corgi",
+      "a_next": "jolie",
+      "b_next": "ryan"
     },
     {
-      "question": "Who is most likely to be eaten by a dinosaur?",
-      "type": "MULT",
-      "answer": "B",
-      "a": "Becca",
-      "b": "Jolie",
-      "c": "Annie",
-      "d": "Ryan",
-      "incorrect_response_md": "<p>:{ #sadmustache</p>\n",
-      "correct_response_md": "<p>Good job.</p>\n"
+      "id": "annie",
+      "text": "You're Annie Daniel!"
     },
     {
-      "question": "Who tells secrets to their cat?",
-      "type": "MULT",
-      "answer": "c",
-      "a": "Becca",
-      "b": "Jolie",
-      "c": "Annie",
-      "d": "Ryan",
-      "incorrect_response_md": "<p>:{ #sadmustache</p>\n",
-      "correct_response_md": "<p>Good job.</p>\n"
+      "id": "becca",
+      "text": "You're Becca Aaronson!"
+    },
+    {
+      "id": "jolie",
+      "text": "You're Jolie McCullough!"
+    },
+    {
+      "id": "ryan",
+      "text": "You're Ryan Murphy!"
     }
   ],
   "META": [
     {
-      "quiz_title": "How well do you know The Texas Tribune's news apps team?",
+      "quiz_title": "Which news apps team member are you?",
       "quiz_intro_md": "<p>This is an example of a quiz made with the News Apps’ <a href=\"https://github.com/texastribune/newsapps-quiz-kit\">Quiz Kit</a>. Send feedback to <a href=\"mailto:newsapps@texastribune.org\">newsapps@texastribune.org</a>.</p>\n",
       "credit": "Becca Aaronson"
     }

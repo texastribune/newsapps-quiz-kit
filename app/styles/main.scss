@@ -7,6 +7,7 @@
 
 .quiz-question {
   border-bottom: 1px solid $tribune-yellow;
+  display: none;
   padding: 0 1em;
   margin-bottom: 1.2em;
 }
@@ -39,9 +40,10 @@
 
 .response {
   background-color: $white;
-  border-radius: 2px;
+  border-radius: 20px;
   border: 1px solid $tribune-teal;
   margin-bottom: 1em;
+  width: 1.8em;
 
   &:hover {
     background-color: transparentize($tribune-teal, .8);

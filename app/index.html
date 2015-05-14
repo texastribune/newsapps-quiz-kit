@@ -22,74 +22,22 @@
 <!-- Question Template: Loops through each question in data.json -->
 
     {% for question in Quiz %}
-    <article id="question-{{ loop.index }}" class="quiz-question">
+    <article id="{{ question.id }}" class="quiz-question">
       <header>
-        <h2 class="font-l">{{ question.question }}</h3>
+        <h2 class="font-l">{{ question.text }}</h3>
       </header>
-
-      <!--   True/False Question -->
-      {% if question.type == "TF" %}
-        <div class="responses">
-        {% if question.answer == true %}
-          <button class="response" value="1">True</button>
-          <button class="response" value="0">False</button>
-        {% else %}
-          <button class="response" value="0">True</button>
-          <button class="response" value="1">False</button>
-        {% endif %}
-        </div>
-      {% else %}
-
-      <!--     Multiple Choice Question -->
-        <ul class="responses">
-          <li>
-            {% if question.answer|lower == "a" %}
-            <button class="response" value="1">A</button>
-            {% else %}
-            <button class="response" value="0">A</button>
-            {% endif %}
-            {{ question.a }}
-          </li>
-          <li>
-            {% if question.answer|lower == "b" %}
-            <button class="response" value="1">B</button>
-            {% else %}
-            <button class="response" value="0">B</button>
-            {% endif %}
-            {{ question.b }}
-          </li>
-          <li>
-            {% if question.answer|lower == "c" %}
-            <button class="response" value="1">C</button>
-            {% else %}
-            <button class="response" value="0">C</button>
-            {% endif %}
-            {{ question.c }}
-          </li>
-          <li>
-            {% if question.answer|lower == "d" %}
-            <button class="response" value="1">D</button>
-            {% else %}
-            <button class="response" value="0">D</button>
-            {% endif %}
-            {{ question.d }}
-          </li>
-        </ul>
+      {% if question.a_option %}
+      <div class="a-option">
+        <button class="response" data-link="{{ question.a_next }}">&nbsp;</button>
+        {{ question.a_option }}
+      </div>
       {% endif %}
-
-      <!--     Answer Feedback   -->
-      <div class="correct">
-        <header>
-          <h2 class="font-m">Correct!</h2>
-        </header>
-        {{ question.correct_response_md }}
+      {% if question.b_option %}
+      <div class="b-option">
+        <button class="response" data-link="{{ question.b_next }}">&nbsp;</button>
+        {{ question.b_option }}
       </div>
-      <div class="incorrect">
-        <header>
-          <h2 class="font-m">Wrong</h2>
-        </header>
-        {{ question.incorrect_response_md }}
-      </div>
+      {% endif %}
     </article>
     {% endfor %}
   </section>
