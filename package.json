@@ -2,7 +2,7 @@
   "private": true,
   "config": {
     "s3_bucket": "graphics.texastribune.org",
-    "slug": "test-quiz"
+    "slug": "test-flow-chart"
   },
   "devDependencies": {
     "browser-sync": "^2.0.0-rc10",
