@@ -14,7 +14,19 @@ The News Apps Quiz Kit is a boilerplate for embeddable quizes. It was built for 
 
 Each row represents a question. Under type, indicate whether the question is true/false (TF) or multiple choice (MULT). For TF questions, just write "true" or "false" in the answer columns, and leave the multiple choice answer columns blank. For MULT questions, fill in each of the multiple choice answers, and then indicate which is correct in the answer column. (The template will accept capital or lowercase letters A/a, B/b, C/c or D/d.)
 
+### Flow Charts
 
+Flow charts are a little bit different than a regular quiz. You'll need to give each question an ID, and indicate which ID (i.e. question) to show next for each option. Switch to the "flow-chart" branch and clone THAT repo (the styles, script &amp; index.html are a bit different). Here's a flow-chart [spreadsheet template](https://docs.google.com/spreadsheets/d/1zcnH7kQNqYA7a9DM6gRivG7HZu9fUab4nGLmRqJY3Ls/edit#gid=0):
+
+| id    | text_md                                                                                                                                                             | a_option_md                        | b_option_md              | a_next | b_next | img       |
+|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|--------------------------|--------|--------|-----------|
+| start | Are you a cat or dog person?                                                                                                                                        | Cat                                | Dog                      | cat    | dog    |           |
+| cat   | Do you tell secrets to your cat?                                                                                                                                    | Yes! She's the best secret-keeper. | No, I have real friends. | annie  | becca  |           |
+| dog   | Would you rather have a [chickenosaurus](http://qz.com/404056/a-team-of-scientists-have-engineered-a-chicken-with-a-dinosaurs-face-to-study-evolution/) or a corgi? | Chickenosaurus                     | Corgi                    | jolie  | ryan   |           |
+| annie | You're Annie Daniel!                                                                                                                                                |                                    |                          |        |        | annie.jpg |
+| becca | You're Becca Aaronson!                                                                                                                                              |                                    |                          |        |        | becca.jpg |
+| jolie | You're Jolie McCullough!                                                                                                                                            |                                    |                          |        |        | jolie.jpg |
+| ryan  | You're Ryan Murphy!                                                                                                                                                 |                                    |                          |        |        | ryan.jpg  |
 
 ### Features
 
