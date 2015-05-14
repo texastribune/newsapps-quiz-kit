@@ -1,25 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{ META.quiz_title }} | The Texas Tribune</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <META[0] charset="utf-8">
+  <META[0] http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ META[0].quiz_title }} | The Texas Tribune</title>
+  <META[0] name="viewport" content="width=device-width, initial-scale=1">
   <!-- build:css styles/main.min.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
 <body>
 
-<div class="header">
-  <h1>{{ META.quiz_title }}</h1>
-</div>
-
-<div class="prose">
-  {{ META.prose }}
-</div>
-
 <div id="graphic" class="graphic">
+  <header>
+    <h2 class="font-xl">{{ META[0].quiz_title }}</h2>
+    <span class="subhead">{{ META[0].quiz_intro_md }}</span>
+  </header>
 
   <section class="quiz">
 
@@ -86,13 +82,13 @@
         <header>
           <h2 class="font-m">Correct!</h2>
         </header>
-        {{ question.correct_response }}
+        {{ question.correct_response_md }}
       </div>
       <div class="incorrect">
         <header>
           <h2 class="font-m">Wrong</h2>
         </header>
-        {{ question.incorrect_response }}
+        {{ question.incorrect_response_md }}
       </div>
     </article>
     {% endfor %}
@@ -109,8 +105,8 @@
 
 <div class="footer">
   <ul>
-    {% if META.source %}<li>Source: {% if META.source_url %}<a href="{{ META. source_url }}">{{ META.source }}</a>{% else %}{{ META.source }}{% endif %}</li>{% endif %}
-    {% if META.credit %}<li>Credit: {{ META.credit }}</li>{% endif %}
+    {% if META[0].source %}<li>Source: {% if META[0].source_url %}<a href="{{ META[0]. source_url }}">{{ META[0].source }}</a>{% else %}{{ META[0].source }}{% endif %}</li>{% endif %}
+    {% if META[0].credit %}<li>Credit: {{ META[0].credit }}</li>{% endif %}
   </ul>
 </div>
 
