@@ -20,7 +20,7 @@
       console.log(next);
 
 
-      $(question).find('.response').attr('disabled', true);
+      $(question).find('.response').attr('disabled', true).addClass('disable');
 
       pymChild.sendHeight();
 

@@ -5,6 +5,7 @@
   <META[0] http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ META[0].quiz_title }} | The Texas Tribune</title>
   <META[0] name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <!-- build:css styles/main.min.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
@@ -24,31 +25,29 @@
     {% for question in Quiz %}
     <article id="{{ question.id }}" class="quiz-question">
       <header>
-        <h2 class="font-l">{{ question.text }}</h3>
+        {{ question.text_md }}
       </header>
       <section class="options">
-        {% if question.a_option %}
+        {% if question.a_option_md %}
         <div class="option">
-          <button class="response" data-link="{{ question.a_next }}">&nbsp;</button>
-          {{ question.a_option }}
+          <button class="response" data-link="{{ question.a_next }}"><i class="fa fa-circle-thin"></i><i class="fa fa-check-circle"></i></button>
+          {{ question.a_option_md }}
         </div>
         {% endif %}
-        {% if question.b_option %}
+        {% if question.b_option_md %}
         <div class="option">
-          <button class="response" data-link="{{ question.b_next }}">&nbsp;</button>
-          {{ question.b_option }}
+          <button class="response" data-link="{{ question.b_next }}"><i class="fa fa-circle-thin"></i><i class="fa fa-check-circle"></i></button>
+          {{ question.b_option_md }}
         </div>
+      {% endif %}
+      {% if question.img %}
+      <figure class="image">
+        <img src="/assets/images/{{ question.img }}">
+      </figure>
       {% endif %}
       </section>
     </article>
     {% endfor %}
-  </section>
-
-  <!-- Quiz Results -->
-  <section id="quiz-results" class="quiz-results">
-    <header>
-      <h2 class="font-xl">You scored <span id="score"></span> of <span id="total-questions"></span>!</h2>
-    </header>
   </section>
 
 </div>
