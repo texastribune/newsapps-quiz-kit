@@ -26,18 +26,20 @@
       <header>
         <h2 class="font-l">{{ question.text }}</h3>
       </header>
-      {% if question.a_option %}
-      <div class="a-option">
-        <button class="response" data-link="{{ question.a_next }}">&nbsp;</button>
-        {{ question.a_option }}
-      </div>
+      <section class="options">
+        {% if question.a_option %}
+        <div class="option">
+          <button class="response" data-link="{{ question.a_next }}">&nbsp;</button>
+          {{ question.a_option }}
+        </div>
+        {% endif %}
+        {% if question.b_option %}
+        <div class="option">
+          <button class="response" data-link="{{ question.b_next }}">&nbsp;</button>
+          {{ question.b_option }}
+        </div>
       {% endif %}
-      {% if question.b_option %}
-      <div class="b-option">
-        <button class="response" data-link="{{ question.b_next }}">&nbsp;</button>
-        {{ question.b_option }}
-      </div>
-      {% endif %}
+      </section>
     </article>
     {% endfor %}
   </section>

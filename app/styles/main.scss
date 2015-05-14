@@ -4,12 +4,30 @@
 @import 'base';
 
 // Add your SCSS here!
+#graphic {
+  @extend %container;
+}
 
 .quiz-question {
-  border-bottom: 1px solid $tribune-yellow;
+  border-top: 1px solid $tribune-yellow;
   display: none;
-  padding: 0 1em;
   margin-bottom: 1.2em;
+
+  h2 {
+    text-align: center;
+    margin-top: 1em;
+  }
+
+}
+
+.option {
+  @include span-columns(6);
+  @include omega();
+  text-align: center;
+}
+
+.options {
+  @include clearfix;
 }
 
 .correct,
