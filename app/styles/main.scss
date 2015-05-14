@@ -55,3 +55,11 @@
     background-color: transparentize($tribune-teal, .4);
   }
 }
+
+.footer {
+  @extend %font-s;
+  background-color: $white;
+  color: $text-gray;
+  font-family: $base-sans-serif;
+  text-align: left;
+}
