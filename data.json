@@ -19,7 +19,7 @@
     {
       "id": "dog",
       "text_md": "<p>Would you rather have a <a href=\"http://qz.com/404056/a-team-of-scientists-have-engineered-a-chicken-with-a-dinosaurs-face-to-study-evolution/\">chickenosaurus</a> or a corgi?</p>\n",
-      "a_option_md": "<p>Chihuahua-mix</p>\n",
+      "a_option_md": "<p>Chickenosaurus</p>\n",
       "b_option_md": "<p>Corgi</p>\n",
       "a_next": "jolie",
       "b_next": "ryan"
@@ -48,7 +48,7 @@
   "META": [
     {
       "quiz_title": "Which news apps team member are you?",
-      "quiz_intro_md": "<p>This is an example of a quiz made with the News Apps’ <a href=\"https://github.com/texastribune/newsapps-quiz-kit\">Quiz Kit</a>. Send feedback to <a href=\"mailto:newsapps@texastribune.org\">newsapps@texastribune.org</a>.</p>\n",
+      "quiz_intro_md": "<p>This is an example of a quiz made with the News Apps <a href=\"https://github.com/texastribune/newsapps-quiz-kit\">Quiz Kit</a>. Send feedback to <a href=\"mailto:newsapps@texastribune.org\">newsapps@texastribune.org</a>.</p>\n",
       "credit": "Becca Aaronson"
     }
   ]
