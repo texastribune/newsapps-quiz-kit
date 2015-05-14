@@ -29,16 +29,16 @@
       </header>
       <section class="options">
         {% if question.a_option_md %}
-        <div class="option">
-          <button class="response" data-link="{{ question.a_next }}"><i class="fa fa-circle-thin"></i><i class="fa fa-check-circle"></i></button>
+        <label class="option" data-link="{{ question.a_next }}">
+          <button class="response"><i class="fa fa-circle-thin"></i><i class="fa fa-check-circle"></i></button>
           {{ question.a_option_md }}
-        </div>
+        </label>
         {% endif %}
         {% if question.b_option_md %}
-        <div class="option">
-          <button class="response" data-link="{{ question.b_next }}"><i class="fa fa-circle-thin"></i><i class="fa fa-check-circle"></i></button>
+        <label class="option" data-link="{{ question.b_next }}">
+          <button class="response"><i class="fa fa-circle-thin"></i><i class="fa fa-check-circle"></i></button>
           {{ question.b_option_md }}
-        </div>
+        </label>
       {% endif %}
       {% if question.img %}
       <figure class="image">

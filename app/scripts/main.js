@@ -10,7 +10,7 @@
     $('#start').show();
     // Add your JS here!
 
-    $('.response').click(function() {
+    $('.option').click(function() {
       var question = $(this).closest('article');
       var next = $(this).attr('data-link');
 
@@ -20,7 +20,7 @@
       console.log(next);
 
 
-      $(question).find('.response').attr('disabled', true).addClass('disable');
+      $(question).find('.option').attr('disabled', true).addClass('disable');
 
       pymChild.sendHeight();
 
