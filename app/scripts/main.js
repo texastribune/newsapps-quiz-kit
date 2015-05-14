@@ -15,12 +15,8 @@
       var next = $(this).attr('data-link');
 
       $(this).addClass('selected');
+      $(question).find('.option').off('click').addClass('disable');
       $('#' + next).show();
-
-      console.log(next);
-
-
-      $(question).find('.option').attr('disabled', true).addClass('disable');
 
       pymChild.sendHeight();
 

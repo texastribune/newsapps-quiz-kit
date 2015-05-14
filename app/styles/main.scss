@@ -4,9 +4,6 @@
 @import 'base';
 
 // Add your SCSS here!
-#graphic {
-  @extend %container;
-}
 
 .image {
   text-align: center;
@@ -64,8 +61,8 @@
   margin-bottom: 1em;
 }
 
-.response,
-.response.disable:hover {
+.option,
+.option.disable:hover {
   .fa-circle-thin {
     display: block;
   }
@@ -75,7 +72,7 @@
   }
 }
 
-.response:hover,
+.option:hover,
 .selected,
 .selected.disable:hover {
   .fa-circle-thin {
@@ -85,4 +82,12 @@
   .fa-check-circle {
     display: block;
   }
+}
+
+.footer {
+  @extend %font-s;
+  background-color: $white;
+  color: $text-gray;
+  font-family: $base-sans-serif;
+  text-align: left;
 }

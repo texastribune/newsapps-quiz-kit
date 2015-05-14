@@ -49,15 +49,14 @@
     </article>
     {% endfor %}
   </section>
-
 </div>
-
-<div class="footer">
+<footer class="footer">
   <ul>
     {% if META[0].source %}<li>Source: {% if META[0].source_url %}<a href="{{ META[0]. source_url }}">{{ META[0].source }}</a>{% else %}{{ META[0].source }}{% endif %}</li>{% endif %}
     {% if META[0].credit %}<li>Credit: {{ META[0].credit }}</li>{% endif %}
   </ul>
-</div>
+</footer>
+
 
 <!-- build:js scripts/main.min.js -->
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
