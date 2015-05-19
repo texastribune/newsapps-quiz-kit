@@ -50,6 +50,15 @@
       "d": "Ryan",
       "incorrect_response_md": "<p>:{ #sadmustache</p>\n",
       "correct_response_md": "<p>Good job.</p>\n"
+    },
+    {
+      "question": "How many pets do we collectively have?",
+      "type": "MULT",
+      "answer": "b",
+      "a": 2,
+      "b": 5,
+      "incorrect_response_md": "<p>Not even close.</p>\n",
+      "correct_response_md": "<p>Technically 4, but we’ll count Willow for Ryan.</p>\n"
     }
   ],
   "META": [
