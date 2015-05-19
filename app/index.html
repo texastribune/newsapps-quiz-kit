@@ -1,10 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <META[0] charset="utf-8">
-  <META[0] http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{ META[0].quiz_title }} | The Texas Tribune</title>
-  <META[0] name="viewport" content="width=device-width, initial-scale=1">
+  <META charset="utf-8">
+  <META http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ META.quiz_title }} | The Texas Tribune</title>
+  <META name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:site_name" content="The Texas Tribune">
+  <meta property="og:title" content="Quiz | The Texas Tribune">
+  <meta property="og:description" content="{{ META.quiz_title }}">
+  <meta property="og:url" content="http://graphics.texastribune.org/graphics/{{ META.slug }}/">
+  <meta property="og:image" content="{{ META.story_image }}">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <!-- build:css styles/main.min.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
@@ -13,8 +20,8 @@
 
 <div id="graphic" class="graphic">
   <header>
-    <h2 class="font-xl">{{ META[0].quiz_title }}</h2>
-    <span class="subhead">{{ META[0].quiz_intro_md }}</span>
+    <h2 class="font-xl">{{ META.quiz_title }}</h2>
+    <span class="subhead">{{ META.quiz_intro_md }}</span>
   </header>
 
   <section class="quiz">
@@ -103,14 +110,30 @@
     <header>
       <h2 class="font-xl">You scored <span id="score"></span> of <span id="total-questions"></span>!</h2>
     </header>
+    <div class="share">
+      <header>
+        <h3 class="paragraph-header">Share this quiz</h3>
+      </header>
+      <a href="https://twitter.com/intent/tweet?text={{ META.quiz_title|urlencode }}%20Take%20%40TexasTribune's%20%20quiz%20to%20find%20out!%20{{ META.story_url|urlencode }}">
+        <button class="ghost-button share-button"><i class="fa fa-twitter"></i></button>
+      </a>
+
+      <a href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fgraphics.texastribune.org%2Fgraphics%2F{{ META.slug|urlencode }}%2F&redirect_uri={{ META.story_url|urlencode}}">
+        <button class="ghost-button share-button"><i class="fa fa-facebook"></i></button>
+      </a>
+
+      <a href="mailto:?subject={{ META.quiz_title|urlencode }}&body={{ META.quiz_title|urlencode }}%20Take%20%40TexasTribune's%20%20quiz%20to%20find%20out!%20{{ META.story_url|urlencode }}">
+        <button class="ghost-button share-button"><i class="fa fa-envelope-o"></i></button>
+      </a>
+    </div>
   </section>
 
 </div>
 
 <div class="footer">
   <ul>
-    {% if META[0].source %}<li>Source: {% if META[0].source_url %}<a href="{{ META[0]. source_url }}">{{ META[0].source }}</a>{% else %}{{ META[0].source }}{% endif %}</li>{% endif %}
-    {% if META[0].credit %}<li>Credit: {{ META[0].credit }}</li>{% endif %}
+    {% if META.source %}<li>Source: {% if META.source_url %}<a href="{{ META. source_url }}">{{ META.source }}</a>{% else %}{{ META.source }}{% endif %}</li>{% endif %}
+    {% if META.credit %}<li>Credit: {{ META.credit }}</li>{% endif %}
   </ul>
 </div>
 

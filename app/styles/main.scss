@@ -56,6 +56,10 @@
   }
 }
 
+.share-button {
+  min-width: 3em;
+}
+
 .footer {
   @extend %font-s;
   background-color: $white;

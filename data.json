@@ -61,11 +61,14 @@
       "correct_response_md": "<p>Technically 4, but we’ll count Willow for Ryan.</p>\n"
     }
   ],
-  "META": [
-    {
-      "quiz_title": "How well do you know The Texas Tribune's news apps team?",
-      "quiz_intro_md": "<p>This is an example of a quiz made with the News Apps’ <a href=\"https://github.com/texastribune/newsapps-quiz-kit\">Quiz Kit</a>. Send feedback to <a href=\"mailto:newsapps@texastribune.org\">newsapps@texastribune.org</a>.</p>\n",
-      "credit": "Becca Aaronson"
-    }
-  ]
+  "META": {
+    "quiz_title": "How well do you know The Texas Tribune's news apps team?",
+    "quiz_intro_md": "<p>This is an example of a quiz made with the News Apps’ <a href=\"https://github.com/texastribune/newsapps-quiz-kit\">Quiz Kit</a>. Send feedback to <a href=\"mailto:newsapps@texastribune.org\">newsapps@texastribune.org</a>.</p>\n",
+    "source": "",
+    "source_url": "",
+    "credit": "Becca Aaronson",
+    "story_url": "http://texastribune.org",
+    "story_image": "http://s3.amazonaws.com/static.texastribune.org/media/images/2015/02/13/Abbott-Obama-Gavel_jpg_260x1000_q100.jpg",
+    "slug": "test-quiz"
+  }
 }
