@@ -58,6 +58,7 @@
             {% endif %}
             {{ question.b }}
           </li>
+          {% if question.c }
           <li>
             {% if question.answer|lower == "c" %}
             <button class="response" value="1">C</button>
@@ -66,6 +67,8 @@
             {% endif %}
             {{ question.c }}
           </li>
+          {% endif %}
+          {% if question.d %}
           <li>
             {% if question.answer|lower == "d" %}
             <button class="response" value="1">D</button>
@@ -74,6 +77,7 @@
             {% endif %}
             {{ question.d }}
           </li>
+          {% endif %}
         </ul>
       {% endif %}
 
