@@ -37,7 +37,7 @@
         totalQs++;
       }
 
-      $(question).find('.response').attr('disabled', true);
+      $(question).find('.response').attr('disabled', true).addClass('disabled');
 
       if (buttons.every(quizComplete)) {
         $('.quiz-results').toggle();

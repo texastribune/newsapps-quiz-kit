@@ -50,13 +50,21 @@
   &:hover {
     background-color: transparentize($tribune-teal, .8);
   }
+
+  &.disabled {
+    &:hover {
+      background-color: $white;
+    }
+  }
 }
 
 .selected {
   background-color: transparentize($tribune-teal, .4);
 
-  &:hover {
-    background-color: transparentize($tribune-teal, .4);
+  &.disabled {
+    &:hover {
+      background-color: transparentize($tribune-teal, .4);
+    }
   }
 }
 
