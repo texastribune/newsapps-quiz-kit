@@ -5,12 +5,6 @@
 
 // Add your SCSS here!
 
-.quiz-question {
-  border-bottom: 1px solid $tribune-yellow;
-  padding: 0 1em;
-  margin-bottom: 1.2em;
-}
-
 .correct,
 .incorrect,
 .quiz-results {
@@ -23,18 +17,28 @@
   }
 }
 
+.footer {
+  @extend %font-s;
+  background-color: $white;
+  color: $text-gray;
+  font-family: $base-sans-serif;
+  text-align: left;
+}
+
 .incorrect {
   header h2 {
     color: $rep-red;
   }
 }
 
-.quiz-results {
-  text-align: center;
+.quiz-question {
+  border-bottom: 1px solid $tribune-yellow;
+  padding: 0 1em;
+  margin-bottom: 1.2em;
 }
 
-.responses {
-  margin-bottom: 1em;
+.quiz-results {
+  text-align: center;
 }
 
 .response {
@@ -56,14 +60,14 @@
   }
 }
 
-.share-button {
-  min-width: 3em;
+.share {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
-.footer {
-  @extend %font-s;
-  background-color: $white;
-  color: $text-gray;
-  font-family: $base-sans-serif;
-  text-align: left;
+.share-button {
+  min-width: 3em;
 }
