@@ -24,7 +24,7 @@
 
     $('#reset').click(function() {
       $('.quiz-question').hide();
-      $('.option').removeClass('selected', 'disable').css('pointer-events', 'auto');
+      $('.option').removeClass('selected disable').css('pointer-events', 'auto');
 
       $('#start').show();
     });
