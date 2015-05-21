@@ -48,6 +48,29 @@
       </section>
     </article>
     {% endfor %}
+    <div class="reset">
+      <button id="reset" class="ghost-button">Start Over</button>
+    </div>
+
+  </section>
+
+  <!-- Quiz Results -->
+
+  <section class="share">
+    <header>
+      <h3 class="paragraph-header">Share this quiz</h3>
+    </header>
+    <a href="https://twitter.com/intent/tweet?text={{ META.quiz_title|urlencode }}%20Take%20%40TexasTribune's%20%20quiz%20to%20find%20out!%20{{ META.story_url|urlencode }}">
+      <button class="ghost-button share-button"><i class="fa fa-twitter"></i></button>
+    </a>
+
+    <a href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fgraphics.texastribune.org%2Fgraphics%2F{{ META.slug|urlencode }}%2F&redirect_uri={{ META.story_url|urlencode}}">
+      <button class="ghost-button share-button"><i class="fa fa-facebook"></i></button>
+    </a>
+
+    <a href="mailto:?subject={{ META.quiz_title|urlencode }}&body={{ META.quiz_title|urlencode }}%20Take%20%40TexasTribune's%20%20quiz%20to%20find%20out!%20{{ META.story_url|urlencode }}">
+      <button class="ghost-button share-button"><i class="fa fa-envelope-o"></i></button>
+    </a>
   </section>
 </div>
 <footer class="footer">

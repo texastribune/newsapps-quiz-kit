@@ -15,11 +15,18 @@
       var next = $(this).attr('data-link');
 
       $(this).addClass('selected');
-      $(question).find('.option').off('click').addClass('disable');
+      $(question).find('.option').css('pointer-events', 'none').addClass('disable');
       $('#' + next).show();
 
       pymChild.sendHeight();
 
+    });
+
+    $('#reset').click(function() {
+      $('.quiz-question').hide();
+      $('.option').removeClass('selected', 'disable').css('pointer-events', 'auto');
+
+      $('#start').show();
     });
 
     // if (pymChild) {
