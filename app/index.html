@@ -19,9 +19,9 @@
 <body>
 
 <div id="graphic" class="graphic">
-  <header>
+  <header class="quiz-intro">
     <h2 class="font-xl">{{ META.quiz_title }}</h2>
-    <span class="subhead">{{ META.quiz_intro_md }}</span>
+    <p class="subhead">{{ META.quiz_intro }}</p>
   </header>
 
   <section class="quiz">
@@ -31,7 +31,7 @@
     {% for question in Quiz %}
     <article id="question-{{ loop.index }}" class="quiz-question">
       <header>
-        <h2 class="font-l">{{ question.question }}</h3>
+        <h2 class="font-m">{{ question.question }}</h3>
       </header>
 
       <!--   True/False Question -->
@@ -55,7 +55,7 @@
             {% else %}
             <button class="response" value="0">A</button>
             {% endif %}
-            {{ question.a }}
+            <p class="subtext">{{ question.a }}</p>
           </li>
           <li>
             {% if question.answer|lower == "b" %}
@@ -63,7 +63,7 @@
             {% else %}
             <button class="response" value="0">B</button>
             {% endif %}
-            {{ question.b }}
+            <p class="subtext">{{ question.b }}</p>
           </li>
           {% if question.c %}
           <li>
@@ -72,7 +72,7 @@
             {% else %}
             <button class="response" value="0">C</button>
             {% endif %}
-            {{ question.c }}
+            <p class="subtext">{{ question.c }}</p>
           </li>
           {% endif %}
           {% if question.d %}
@@ -82,7 +82,7 @@
             {% else %}
             <button class="response" value="0">D</button>
             {% endif %}
-            {{ question.d }}
+            <p class="subtext">{{ question.d }}</p>
           </li>
           {% endif %}
         </ul>

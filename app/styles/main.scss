@@ -31,6 +31,10 @@
   }
 }
 
+.quiz-intro {
+  margin-bottom: 2em;
+}
+
 .quiz-question {
   border-bottom: 1px solid $tribune-yellow;
   padding: 0 1em;
@@ -39,6 +43,14 @@
 
 .quiz-results {
   text-align: center;
+}
+
+.responses {
+  li {
+    p.subtext {
+      display: inline-block;
+    }
+  }
 }
 
 .response {
