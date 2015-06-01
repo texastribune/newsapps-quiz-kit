@@ -46,9 +46,21 @@
 }
 
 .responses {
+  @include clearfix();
+
   li {
+    @include span-columns(6);
+    @include omega(2n);
+
     p.subtext {
       display: inline-block;
+      margin: 0 0 .25em .5em;
+      max-width: 85%;
+      vertical-align: middle;
+    }
+
+    @include media($default-mobile) {
+      @include span-columns(12);
     }
   }
 }
@@ -78,16 +90,4 @@
       background-color: transparentize($tribune-teal, .4);
     }
   }
-}
-
-.share {
-  a {
-    &:hover {
-      text-decoration: none;
-    }
-  }
-}
-
-.share-button {
-  min-width: 3em;
 }

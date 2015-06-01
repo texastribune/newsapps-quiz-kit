@@ -19,10 +19,17 @@
 <body>
 
 <div id="graphic" class="graphic">
+
+<!--
+
+  When embedding quiz on a story page, don't use this header
+
   <header class="quiz-intro">
     <h2 class="font-xl">{{ META.quiz_title }}</h2>
     <p class="subhead">{{ META.quiz_intro }}</p>
   </header>
+
+  -->
 
   <section class="quiz">
 
@@ -108,24 +115,8 @@
   <!-- Quiz Results -->
   <section id="quiz-results" class="quiz-results">
     <header>
-      <h2 class="font-xl">You scored <span id="score"></span> of <span id="total-questions"></span>!</h2>
+      <h2 class="font-xl">You scored <span id="score"></span> out of <span id="total-questions"></span>!</h2>
     </header>
-    <div class="share">
-      <header>
-        <h3 class="paragraph-header">Share this quiz</h3>
-      </header>
-      <a href="https://twitter.com/intent/tweet?text={{ META.quiz_title|urlencode }}%20Take%20%40TexasTribune's%20%20quiz%20to%20find%20out!%20{{ META.story_url|urlencode }}">
-        <button class="ghost-button share-button"><i class="fa fa-twitter"></i></button>
-      </a>
-
-      <a href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fgraphics.texastribune.org%2Fgraphics%2F{{ META.slug|urlencode }}%2F&redirect_uri={{ META.story_url|urlencode}}">
-        <button class="ghost-button share-button"><i class="fa fa-facebook"></i></button>
-      </a>
-
-      <a href="mailto:?subject={{ META.quiz_title|urlencode }}&body={{ META.quiz_title|urlencode }}%20Take%20%40TexasTribune's%20%20quiz%20to%20find%20out!%20{{ META.story_url|urlencode }}">
-        <button class="ghost-button share-button"><i class="fa fa-envelope-o"></i></button>
-      </a>
-    </div>
   </section>
 
 </div>
