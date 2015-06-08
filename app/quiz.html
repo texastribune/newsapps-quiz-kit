@@ -1,6 +1,10 @@
-  <!-- This macro requires the array of questions to be named 'Quiz'.
+<!-- 
+To load this macro, add the following to your index.html:
 
-  Sample data structure:
+{% include "quiz.html" %}
+{{ quiz() }} 
+  
+This macro expects the array of questions to be named 'Quiz'. Sample data structure:
     {
       "Quiz": [
         {
@@ -24,7 +28,8 @@
       ]
     }
 
-  -->
+-->
+
 
 {% macro quiz() %}
   <section class="quiz">
