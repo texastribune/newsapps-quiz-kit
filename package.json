@@ -28,6 +28,7 @@
     "gulp-useref": "^1.1.1",
     "inquirer": "^0.8.0",
     "jshint-stylish": "^1.0.0",
+    "jquery": "^2.1.4",
     "marked": "^0.3.3",
     "nconf": "^0.7.1",
     "newsapps-styles": "^1.0.1",
