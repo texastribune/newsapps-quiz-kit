@@ -30,7 +30,7 @@
     "jshint-stylish": "^1.0.0",
     "marked": "^0.3.3",
     "nconf": "^0.7.1",
-    "newsapps-styles": "1.0.1",
+    "newsapps-styles": "^1.0.1",
     "open": "0.0.5",
     "request": "^2.53.0",
     "run-sequence": "^1.0.2",
