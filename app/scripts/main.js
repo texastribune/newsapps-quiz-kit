@@ -14,7 +14,7 @@
     var score = 0;
 
 
-    function quizComplete(question) {
+    function quizComplete() {
       // Tests whether the quiz is complete.
       // Count the number of selected responses
       var selectedResponses = document.getElementsByClassName('selected');
