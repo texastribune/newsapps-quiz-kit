@@ -18,60 +18,9 @@
     <span class="subhead">{{ META[0].quiz_intro_md }}</span>
   </header>
 
-  <section class="quiz">
+{% include "flowchart.html" %}
+{{ flowchart() }}
 
-<!-- Question Template: Loops through each question in data.json -->
-
-    {% for question in Quiz %}
-    <article id="{{ question.id }}" class="quiz-question">
-      <header>
-        {{ question.text_md }}
-      </header>
-      <section class="options">
-        {% if question.a_option_md %}
-        <label class="option" data-link="{{ question.a_next }}">
-          <button class="response"><i class="fa fa-circle-thin"></i><i class="fa fa-check-circle"></i></button>
-          {{ question.a_option_md }}
-        </label>
-        {% endif %}
-        {% if question.b_option_md %}
-        <label class="option" data-link="{{ question.b_next }}">
-          <button class="response"><i class="fa fa-circle-thin"></i><i class="fa fa-check-circle"></i></button>
-          {{ question.b_option_md }}
-        </label>
-      {% endif %}
-      {% if question.img %}
-      <figure class="image">
-        <img src="assets/images/{{ question.img }}">
-      </figure>
-      {% endif %}
-      </section>
-    </article>
-    {% endfor %}
-    <div class="reset">
-      <button id="reset" class="ghost-button">Start Over</button>
-    </div>
-
-  </section>
-
-  <!-- Quiz Results -->
-
-  <section class="share">
-    <header>
-      <h3 class="paragraph-header">Share this quiz</h3>
-    </header>
-    <a href="https://twitter.com/intent/tweet?text={{ META.quiz_title|urlencode }}%20Take%20%40TexasTribune's%20%20quiz%20to%20find%20out!%20{{ META.story_url|urlencode }}">
-      <button class="ghost-button share-button"><i class="fa fa-twitter"></i></button>
-    </a>
-
-    <a href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fgraphics.texastribune.org%2Fgraphics%2F{{ META.slug|urlencode }}%2F&redirect_uri={{ META.story_url|urlencode}}">
-      <button class="ghost-button share-button"><i class="fa fa-facebook"></i></button>
-    </a>
-
-    <a href="mailto:?subject={{ META.quiz_title|urlencode }}&body={{ META.quiz_title|urlencode }}%20Take%20%40TexasTribune's%20%20quiz%20to%20find%20out!%20{{ META.story_url|urlencode }}">
-      <button class="ghost-button share-button"><i class="fa fa-envelope-o"></i></button>
-    </a>
-  </section>
 </div>
 <footer class="footer">
   <ul>
@@ -84,7 +33,7 @@
 <!-- build:js scripts/main.min.js -->
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/pym.js/dist/pym.js"></script>
-<script src="scripts/main.js"></script>
+<script src="scripts/flowchart.js"></script>
 <!-- endbuild -->
 </body>
 </html>
