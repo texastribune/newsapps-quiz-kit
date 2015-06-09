@@ -23,7 +23,7 @@
     });
 
     $('#reset').click(function() {
-      $('.quiz-question').hide();
+      $('.flow-question').hide();
       $('.option').removeClass('selected disable').css('pointer-events', 'auto');
 
       $('#start').show();

@@ -1,11 +1,11 @@
 {% macro flowchart() %}
 
-<section class="quiz">
+<section class="flowchart">
 
 <!-- Question Template: Loops through each question in data.json -->
 
   {% for question in Quiz %}
-  <article id="{{ question.id }}" class="quiz-question">
+  <article id="{{ question.id }}" class="flow-question">
     <header>
       {{ question.text_md }}
     </header>
