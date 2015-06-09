@@ -2,20 +2,9 @@
 
 @import 'node_modules/newsapps-styles/initialize';
 @import 'base';
+@import 'quiz';
 
 // Add your SCSS here!
-
-.correct,
-.incorrect,
-.quiz-results {
-  display: none;
-}
-
-.correct {
-  header h2 {
-    color: $green;
-  }
-}
 
 .footer {
   @extend %font-s;
@@ -23,71 +12,4 @@
   color: $text-gray;
   font-family: $base-sans-serif;
   text-align: left;
-}
-
-.incorrect {
-  header h2 {
-    color: $rep-red;
-  }
-}
-
-.quiz-intro {
-  margin-bottom: 2em;
-}
-
-.quiz-question {
-  border-bottom: 1px solid $tribune-yellow;
-  padding: 0 1em;
-  margin-bottom: 1.2em;
-}
-
-.quiz-results {
-  text-align: center;
-}
-
-.responses {
-  @include clearfix();
-
-  li {
-    @include span-columns(6);
-    @include omega(2n);
-
-    p.subtext {
-      display: inline-block;
-      margin: 0 0 .25em .5em;
-      max-width: 85%;
-      vertical-align: middle;
-    }
-
-    @include media($default-mobile) {
-      @include span-columns(12);
-    }
-  }
-}
-
-.response {
-  background-color: $white;
-  border-radius: 2px;
-  border: 1px solid $tribune-teal;
-  margin-bottom: 1em;
-
-  &:hover {
-    background-color: transparentize($tribune-teal, .8);
-  }
-
-  &.disabled {
-    &:hover {
-      background-color: $white;
-    }
-  }
-}
-
-.selected {
-  background-color: transparentize($tribune-teal, .4);
-
-  &.disabled {
-    &:hover {
-      background-color: transparentize($tribune-teal, .4);
-    }
-  }
 }
