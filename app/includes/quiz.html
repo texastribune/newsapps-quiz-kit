@@ -1,36 +1,3 @@
-<!-- 
-To load this macro, add the following to your index.html:
-
-{% include "quiz.html" %}
-{{ quiz() }} 
-  
-This macro expects the array of questions to be named 'Quiz'. Sample data structure:
-    {
-      "Quiz": [
-        {
-          "question": "The Tribune has an amazing news apps team.",
-          "type": "TF",
-          "answer": true,
-          "incorrect_response_md": "<p>Go home, you’re drunk.</p>\n",
-          "correct_response_md": "<p>Thank you!</p>\n"
-        },
-        {
-          "question": "Which news apps member has the coolest cat poster?",
-          "type": "MULT",
-          "answer": "A",
-          "a": "Becca",
-          "b": "Jolie",
-          "c": "Annie",
-          "d": "Ryan",
-          "incorrect_response_md": "<p>:{ #sadmustache</p>\n",
-          "correct_response_md": "<p>Good job.</p>\n"
-        }
-      ]
-    }
-
--->
-
-
 {% macro quiz() %}
   <section class="quiz">
 
