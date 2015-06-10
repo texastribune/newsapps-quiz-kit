@@ -11,8 +11,8 @@
   .option {
     @include span-columns(6);
     @include omega();
-    text-align: center;
     margin: 0 auto;
+    text-align: center;
 
     button,
     p {
@@ -68,8 +68,8 @@
   }
 
   .reset {
-    text-align: center;
     margin-bottom: 1.2em;
+    text-align: center;
   }
 
   .responses {
