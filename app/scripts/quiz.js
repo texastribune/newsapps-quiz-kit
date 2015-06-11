@@ -34,7 +34,7 @@
       // Add .selected to the clicked response
       $(this).addClass('selected');
 
-      // Test if answer is correct
+      // Test if answer is correct  
       if ($(this).val() === '1') {
         $(question).find('.correct').show();
         $(question).find('.incorrect').hide();

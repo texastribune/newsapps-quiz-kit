@@ -16,7 +16,7 @@ Each row represents a question. Under type, indicate whether the question is tru
 
 ### Flow Charts
 
-Flow charts are a little bit different than a regular quiz. You'll need to give each question an ID, and indicate which ID (i.e. question) to show next for each option. Switch to the "flow-chart" branch and clone THAT repo (the styles, script &amp; index.html are a bit different). Here's a flow-chart [spreadsheet template](https://docs.google.com/spreadsheets/d/1zcnH7kQNqYA7a9DM6gRivG7HZu9fUab4nGLmRqJY3Ls/edit#gid=0):
+Flow charts are a little bit different than a regular quiz. You'll need to give each question an ID, and indicate which ID (i.e. question) to show next for each option. To create a flow chart, add the _flowchart.scss partial to your main.scss, flowchart.js to your index.html and `{% include "flowchart.html" %}`, which contains `{% macro flowchart() %}`, and extend the code in your index.html. Here's a flow-chart [spreadsheet template](https://docs.google.com/spreadsheets/d/1zcnH7kQNqYA7a9DM6gRivG7HZu9fUab4nGLmRqJY3Ls/edit#gid=0):
 
 | id    | text_md                                                                                                                                                             | a_option_md                        | b_option_md              | a_next | b_next | img       |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|--------------------------|--------|--------|-----------|
@@ -45,10 +45,29 @@ Flow charts are a little bit different than a regular quiz. You'll need to give 
 ### Quickstart
 
 1. Download the project folder or clone the repo.
-2. `npm install && bower install` and `npm install jquery`
+2. `npm install`
 3. Authorize your computer if this is your first time to ever use the kit: `npm run spreadsheet/authorize`
-4. Add your Google sheet's ID to the `config.json`, and override any sheets that need to be processed differently. (`keyvalue` or `objectlist`)
-5. Get to work!
+4. Use the spreadsheet templates above to create your quiz or flowchart
+5. Add your Google sheet's ID to the `config.json`, and override any sheets that need to be processed differently. (`keyvalue` or `objectlist`)
+6. Pull the spreadsheet data into your project by running `npm run spreadsheet/fetch`. Check your data.json file to make sure it's there.
+7. Add the quiz or flowchart macro to your index.html file, and the related script file. For example:
+
+```
+{% include "quiz.html" %}
+{{ quiz() }}
+
+<!-- other code -->
+
+<!-- build:js scripts/main.min.js -->
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/pym.js/dist/pym.js"></script>
+<script src="scripts/quiz.js"></script>
+<!-- endbuild -->
+
+```
+
+8. Preview the project locally by running `gulp serve`
+
 
 ### Connect to S3
 

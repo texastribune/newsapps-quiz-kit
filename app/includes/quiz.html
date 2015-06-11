@@ -1,0 +1,89 @@
+{% macro quiz() %}
+  <section class="quiz">
+
+  <!-- Question Template: Loops through each question in data.json -->
+
+    {% for question in Quiz %}
+    <article id="question-{{ loop.index }}" class="quiz-question">
+      <header>
+        <h2 class="font-m">{{ question.question }}</h3>
+      </header>
+
+      <!--   True/False Question -->
+      {% if question.type == "TF" %}
+        <div class="responses">
+        {% if question.answer == true %}
+          <button class="response" value="1">True</button>
+          <button class="response" value="0">False</button>
+        {% else %}
+          <button class="response" value="0">True</button>
+          <button class="response" value="1">False</button>
+        {% endif %}
+        </div>
+      {% else %}
+
+      <!--     Multiple Choice Question -->
+        <ul class="responses">
+          <li>
+            {% if question.answer|lower == "a" %}
+            <button class="response" value="1">A</button>
+            {% else %}
+            <button class="response" value="0">A</button>
+            {% endif %}
+            <p class="subtext">{{ question.a }}</p>
+          </li>
+          <li>
+            {% if question.answer|lower == "b" %}
+            <button class="response" value="1">B</button>
+            {% else %}
+            <button class="response" value="0">B</button>
+            {% endif %}
+            <p class="subtext">{{ question.b }}</p>
+          </li>
+          {% if question.c %}
+          <li>
+            {% if question.answer|lower == "c" %}
+            <button class="response" value="1">C</button>
+            {% else %}
+            <button class="response" value="0">C</button>
+            {% endif %}
+            <p class="subtext">{{ question.c }}</p>
+          </li>
+          {% endif %}
+          {% if question.d %}
+          <li>
+            {% if question.answer|lower == "d" %}
+            <button class="response" value="1">D</button>
+            {% else %}
+            <button class="response" value="0">D</button>
+            {% endif %}
+            <p class="subtext">{{ question.d }}</p>
+          </li>
+          {% endif %}
+        </ul>
+      {% endif %}
+
+      <!--     Answer Feedback   -->
+      <div class="correct">
+        <header>
+          <h2 class="font-m">Correct!</h2>
+        </header>
+        {{ question.correct_response_md }}
+      </div>
+      <div class="incorrect">
+        <header>
+          <h2 class="font-m">Wrong</h2>
+        </header>
+        {{ question.incorrect_response_md }}
+      </div>
+    </article>
+    {% endfor %}
+  </section>
+
+  <!-- Quiz Results -->
+  <section id="quiz-results" class="quiz-results">
+    <header>
+      <h2 class="font-xl">You scored <span id="score"></span> out of <span id="total-questions"></span>!</h2>
+    </header>
+  </section>
+{% endmacro %}
